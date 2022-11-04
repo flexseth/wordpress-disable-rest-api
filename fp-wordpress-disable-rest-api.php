@@ -80,3 +80,8 @@ function run_fp_wordpress_disable_rest_api() {
 
 }
 run_fp_wordpress_disable_rest_api();
+
+function disable_rest($access) {
+	return new WP_Error('access denied', 'REST API Disabled', ['status' => 403]);
+}
+add_filter('rest_authentication_errors', 'disable_rest');
