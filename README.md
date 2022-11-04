@@ -5,4 +5,7 @@ install this plugin to remove access to the REST API in a WordPress installation
 To test this plugin, enter your url, followed by
 `/wp-json/v2/posts`
 
-You should receive an error **Access Denied**
+You should receive an error 
+**Access Denied**
+
+`{"code":"access denied","message":"REST API Disabled","data":{"status":403}}`
